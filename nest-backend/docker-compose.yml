@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  dev-db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=strides
+    ports:
+      - "3306:3306"
